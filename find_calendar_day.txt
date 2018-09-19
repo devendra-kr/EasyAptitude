@@ -1,0 +1,46 @@
+Basic Concepts:-
+1. Each 4th Year is leap year.
+2. Each 100th Year is non-leap year.
+3. Each 400th Year is leap year.
+
+Find odd days in year:-
+1. 356 % 7 = 1 odd day in a year.
+2. 366 % 7 = 2 odd days in a year.
+
+Let calculate odd days in years:-
+1. 100 => get factor of leap and non-leap years (24 + 76)
+    Where 24: leap year and 76 is non-leap years in 100 year.
+    => So, (24 * 2 + 76 * 1) % 7 odd days
+    => 5 odd days
+2. same as odd days in 200 year = (2 * odd days in 100 year) % 7
+    => (2 * 5) % 7  = 3 odd days
+3. odd days in 300 year = 1
+4. odd days in 400 year = (4 * odd days in 100 year)+ 1 leap Year
+    => (4 * 5) % 7 + 1 odd
+    => 0 odd days
+
+Odd day vs Day Name:-
+0 odd day --> Sun
+1 odd day --> Mon
+2 odd day --> Tues
+3 odd day --> Wed
+4 odd day --> Thus
+5 odd day --> Fri
+6 odd day --> Sat
+
+Ex: Find a day on 21st Feb 2001.
+    Step 1. Find odd days in 2000 years (2001 not completed)
+        => 5 * 400 Years
+        => (5 * 0) % 7 odd days
+        => 0 odd days
+    Step 2. Find odd days in Jan month (Feb month not completed)
+        => 31 days in Jan
+        => 31 % 7 odd days
+        => 3 odd days
+    Step 3. Find odd days in 21 days
+        => (21 % 7) odd days
+        => 0 odd days
+
+    Add all Steps result and take module of 7.
+    => (0+3+0) % 7 odd days
+    => 3 odd days, means Wednesday
